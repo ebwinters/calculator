@@ -246,7 +246,7 @@ class Calculator:
 			finalnum = (int(num1) + int(num2))
 		if operator == '-':
 			finalnum = (int(num1) - int(num2))
-		if operator == '':
+		if operator == '/':
 			finalnum = (int(num1) / int(num2))
 		if operator == '*':
 			finalnum = (int(num1) * int(num2))
