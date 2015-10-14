@@ -219,7 +219,22 @@ class Calculator:
 		self.display.set(self.display.get() + '0')
 		print(self.num1)	
 	def press_equals(self):
-		pass
+		starting_string = self.display.get()
+		final_string = ''
+		starting_list = list(starting_string)
+		a = int(starting_list[0])
+		b = starting_list[1]
+		c = int(starting_list[2])
+		if b == '+':
+			final_string = str(a + c)
+		if b == '-':
+			final_string = str(a - c)
+		if b == '/':
+			final_string = str(a / c)
+		if b == '*':
+			final_string = str(a * c)
+		self.display.set(final_string)
+		print(final_string)
 	def press_clr(self):
 		pass
 	def press_star(self):
