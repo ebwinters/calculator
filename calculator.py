@@ -5,8 +5,8 @@ except ImportError:
 
 class Calculator:
 	def __init__(self, master):
-		master.minsize(width=500, height=500)
-		master.maxsize(width=500, height=500)
+		master.minsize(width=250, height=200)
+		master.maxsize(width=650, height=200)
 		self.master = master
 		self.mainframe = tkinter.Frame(self.master, bg='white')
 		self.mainframe.pack(fill=tkinter.BOTH, expand=True)
