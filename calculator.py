@@ -2,7 +2,6 @@ try:
     import Tkinter  
 except ImportError:
     import tkinter
-
 class Calculator:
 	def __init__(self, master):
 		master.minsize(width=250, height=200)
@@ -219,22 +218,41 @@ class Calculator:
 		self.display.set(self.display.get() + '0')
 		print(self.num1)	
 	def press_equals(self):
-		starting_string = self.display.get()
-		final_string = ''
-		starting_list = list(starting_string)
-		a = int(starting_list[0])
-		b = starting_list[1]
-		c = int(starting_list[2])
-		if b == '+':
-			final_string = str(a + c)
-		if b == '-':
-			final_string = str(a - c)
-		if b == '/':
-			final_string = str(a / c)
-		if b == '*':
-			final_string = str(a * c)
-		self.display.set(final_string)
-		print(final_string)
+		str = self.display.get()
+		finalnum = ''
+		num1 = ''
+		num2 = ''
+		operator = ''
+		placeholder = 0
+		second_half = False
+		str_list = list(str)
+		print (str_list)
+		while placeholder < len(str_list):
+			temp = str_list[placeholder]
+
+			if second_half == True and temp.isdigit():
+				num2 = num2 + temp
+				print ('num2 is ' + num2)
+			elif temp.isdigit() and second_half == False:
+				num1 = num1 + temp
+				print ('num1 is ' + num1)
+			else:
+				operator = temp
+				second_half = True
+				print ('operator is ' + operator)
+
+			placeholder = placeholder + 1
+		if operator == '+':
+			finalnum = (int(num1) + int(num2))
+		if operator == '-':
+			finalnum = (int(num1) - int(num2))
+		if operator == '':
+			finalnum = (int(num1) / int(num2))
+		if operator == '*':
+			finalnum = (int(num1) * int(num2))
+
+		print(finalnum)
+		self.display.set(finalnum)
 	def press_clr(self):
 		self.display.set('')
 	def press_star(self):
