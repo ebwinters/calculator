@@ -236,7 +236,7 @@ class Calculator:
 		self.display.set(final_string)
 		print(final_string)
 	def press_clr(self):
-		pass
+		self.display.set('')
 	def press_star(self):
 		self.display.set(self.display.get() + '*')
 
