@@ -174,56 +174,56 @@ class Calculator:
 
 	def press_seven(self):
 		self.num1 = 7
-		self.display.set('7')
+		self.display.set(self.display.get() + '7')
 		print(self.num1)
 	def press_eight(self):
 		self.num1 = 8
-		self.display.set('8')
+		self.display.set(self.display.get() + '8')
 		print(self.num1)
 	def press_nine(self):
 		self.num1 = 9
-		self.display.set('9')
+		self.display.set(self.display.get() + '9')
 		print(self.num1)
 	def press_plus(self):
-		pass
+		self.display.set(self.display.get() + '+')
 	def press_four(self):
 		self.num1 = 4
-		self.display.set('4')
+		self.display.set(self.display.get() + '4')
 		print(self.num1)
 	def press_five(self):
 		self.num1 = 5
-		self.display.set('5')
+		self.display.set(self.display.get() + '5')
 		print(self.num1)
 	def press_six(self):
 		self.num1 = 6
-		self.display.set('6')
+		self.display.set(self.display.get() + '6')
 		print(self.num1)
 	def press_minus(self):
-		pass
+		self.display.set(self.display.get() + '-')
 	def press_one(self):
 		self.num1 = 1
-		self.display.set('1')
+		self.display.set(self.display.get() + '1')
 		print(self.num1)
 	def press_two(self):
 		self.num1 = 2
-		self.display.set('2')
+		self.display.set(self.display.get() + '2')
 		print(self.num1)
 	def press_three(self):
 		self.num1 = 3
-		self.display.set('3')
+		self.display.set(self.display.get() + '3')
 		print(self.num1)	
 	def press_slash(self):
-		pass
+		self.display.set(self.display.get() + '/')
 	def press_zero(self):
 		self.num1 = 0
-		self.display.set('0')
+		self.display.set(self.display.get() + '0')
 		print(self.num1)	
 	def press_equals(self):
 		pass
 	def press_clr(self):
 		pass
 	def press_star(self):
-		pass
+		self.display.set(self.display.get() + '*')
 
 
 if __name__ == '__main__':
